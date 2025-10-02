@@ -2,6 +2,7 @@ import express from "express";
 import nodemailer from "nodemailer";
 
 const app = express();
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
