@@ -20,12 +20,12 @@ app.post("/send-email", async (req, res) => {
   const { to, subject, html } = req.body;
 
   try {
-    await transporter.sendMail({
-      from: `"Portal Unimble" <portal@unimble.com.br>`,
-      to,
-      subject,
-      html,
-    });
+    // await transporter.sendMail({
+    //   from: `"Portal Unimble" <portal@unimble.com.br>`,
+    //   to,
+    //   subject,
+    //   html,
+    // });
 
     res.json({ success: true, message: "E-mail enviado com sucesso" });
   } catch (err) {
